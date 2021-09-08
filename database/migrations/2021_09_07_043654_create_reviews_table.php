@@ -14,15 +14,14 @@ class CreateReviewsTable extends Migration
     public function up()
     {
         Schema::create('reviews', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('target_id');
-            $table->integer('type', 1);
-            $table->string('content', 255);
-            $table->float('rate');
-            $table->integer('location');
-            $table->integer('deleted_at');
-            $table->timestamp('update_at')->default(\DB::raw('CURRENT_TIMESTAMP'));;
-            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));;
+            $table->integer('type', 1)->nullable();
+            $table->string('content', 255)->nullable();
+            $table->float('rate')->nullable();
+            $table->integer('location')->nullable();
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 

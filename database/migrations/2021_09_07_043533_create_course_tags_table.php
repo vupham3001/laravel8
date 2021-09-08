@@ -13,13 +13,12 @@ class CreateCoursesTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('courses_tags', function (Blueprint $table) {
-            $table->id();
+        Schema::create('course_tags', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('tag_id');
             $table->integer('courses_id');
-            $table->integer('deleted_at');
-            $table->timestamp('update_at')->default(\DB::raw('CURRENT_TIMESTAMP'));;
-            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));;
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 

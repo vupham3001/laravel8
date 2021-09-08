@@ -13,13 +13,12 @@ class CreateLessonsUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('lessons_users', function (Blueprint $table) {
-            $table->id();
+        Schema::create('lesson_users', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('lesson_id');
             $table->integer('user_id');
-            $table->integer('deleted_at');
-            $table->timestamp('update_at')->default(\DB::raw('CURRENT_TIMESTAMP'));;
-            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));;
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 

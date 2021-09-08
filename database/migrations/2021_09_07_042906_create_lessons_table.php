@@ -14,15 +14,14 @@ class CreateLessonsTable extends Migration
     public function up()
     {
         Schema::create('lessons', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('course_id');
-            $table->string('title', 100);
-            $table->float('learn_time');
-            $table->string('description', 255);
-            $table->string('requiments', 100);
-            $table->integer('deleted_at');
-            $table->timestamp('update_at')->default(\DB::raw('CURRENT_TIMESTAMP'));;
-            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));;
+            $table->string('title', 100)->nullable();
+            $table->float('learn_time')->nullable();
+            $table->string('description', 255)->nullable();
+            $table->string('requiments', 100)->nullable();
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 

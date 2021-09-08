@@ -4,22 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class reviews extends Model
+class Review extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
-    protected $table = "reviews";
+    protected $table = 'reviews';
 
     protected $fillable = [
-        'id',
         'target_id',
         'type',
         'content',
         'rate',
         'location',
-        'deleted_at',
-        'update_at',
-        'created_at',
     ];
 }
