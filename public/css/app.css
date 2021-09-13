@@ -1,5 +1,1148 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+@font-face {
+  font-family: "GooglrSans-Black";
+  src: url("../assets/font/GoogleSans-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "GoogleSans-BlackItalic";
+  src: url("../assets/font/GoogleSans-BlackItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: "GoogleSans-Bold";
+  src: url("../assets/font/GoogleSans-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "GoogleSans-Italic";
+  src: url("../assets/font/GoogleSans-Italic.otf") format("opentype");
+}
+@font-face {
+  font-family: "UTM BryantLG";
+  src: url("../assets/font/UTM BryantLG.ttf") format("opentype");
+}
+.header {
+  width: 100%;
+}
+.header .nav-cour {
+  display: flex;
+}
+.header .navbar {
+  height: 150px;
+  padding: 0px;
+}
+.header .navbar-branch {
+  margin-left: 130px;
+}
+.header .navbar-nav {
+  margin-right: 130px;
+}
+.header .nav-item {
+  margin-left: 15px;
+  align-items: center;
+}
+.header .nav-link {
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19.07px;
+  border-radius: 17px;
+}
+.header .nav-link:hover {
+  background-color: #B2D235;
+  color: #ffffff !important;
+}
+.header .nav-link-active {
+  background-color: #B2D235;
+  color: #ffffff !important;
+}
+.header .nav-toggler-icon {
+  cursor: pointer;
+}
+
+@media (max-width: 769px) {
+  .header {
+    width: 100%;
+    height: 150px;
+    padding: 0px;
+  }
+  .header .navbar-expand-md .container-fluid, .header .navbar-expand-md .container-xl, .header .navbar-expand-md .container-lg, .header .navbar-expand-md .container-md, .header .navbar-expand-md .container-sm {
+    flex-wrap: wrap;
+  }
+  .header .navbar-branch {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header .navbar-branch img {
+    width: 100%;
+    height: 61.74px;
+  }
+  .header .nav-item {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .header {
+    height: 62px;
+  }
+  .header .navbar {
+    height: 62px;
+  }
+  .header .navbar-toggler {
+    border: none;
+    margin: 19px 21px;
+    padding: 0px;
+  }
+  .header .navbar-toggler-icon {
+    width: 18px;
+    height: 23px;
+  }
+  .header .navbar-branch img {
+    width: 150px;
+    height: 26.75px;
+  }
+}
+.background-hapolearn-banner {
+  width: 100%;
+  height: 655px;
+  background-image: url(../assets/img/hapolearn-banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "UTM BryantLG";
+}
+
+.content-of-hapolearn-banner {
+  flex-direction: column;
+}
+
+.content-hapolearn-title {
+  font-size: 50px;
+  letter-spacing: -0.05em;
+  color: #11114E;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.content-hapolearn-subtitle {
+  font-size: 50px;
+  color: #11114E;
+  font-weight: 900;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+.content-hapolearn-subtitle .hapo-logo {
+  width: 49px;
+  height: 43px;
+  display: inline-block;
+}
+
+.content-hapolearn {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  color: #505353;
+  margin-bottom: 20px;
+}
+
+.button-hapolearn {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 70px;
+  color: #ffffff;
+  letter-spacing: -0.05em;
+  width: 377px;
+  height: 70px;
+  background-color: #B2D235;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 35px;
+}
+
+@media (max-width: 769px) {
+  .background-hapolearn-banner {
+    background-image: url(../assets/img/hapolearn-banner-mobie.png);
+    height: 350px;
+  }
+
+  .content-hapolearn-title {
+    font-size: 28px;
+    line-height: 37px;
+    margin-bottom: 0px;
+  }
+
+  .content-hapolearn-subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  .content-hapolearn-subtitle .hapo-logo {
+    display: inline-block;
+    width: 35px;
+    height: 32px;
+  }
+
+  .content-hapolearn {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+
+  .button-hapolearn {
+    font-size: 19px;
+    width: 220px;
+    height: auto;
+  }
+}
+@media (max-width: 575px) {
+  .background-hapolearn-banner {
+    width: 100%;
+    height: 200px;
+  }
+
+  .content-of-hapolearn-banner {
+    margin-top: 400px !important;
+    margin-left: 59px;
+  }
+
+  .content-hapolearn-title {
+    font-size: 25px;
+    margin-bottom: -8px;
+  }
+
+  .content-hapolearn-subtitle {
+    font-size: 25px;
+    border: 0.5px;
+    margin-bottom: -13px;
+  }
+  .content-hapolearn-subtitle .hapo-logo {
+    width: 25px;
+    height: 23px;
+  }
+
+  .content-hapolearn {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .button-hapolearn {
+    font-size: 18px;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.main-courses {
+  width: 100%;
+  margin-top: 50px;
+}
+.main-courses .card-img-top {
+  height: 250px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: none;
+}
+.main-courses .card-img-top img {
+  width: 60%;
+}
+.main-courses .html-css-js {
+  background-color: #3F6185;
+}
+.main-courses .lavarel {
+  background-color: #DC594C;
+}
+.main-courses .img-php {
+  background-color: #556598;
+}
+.main-courses .card-title {
+  font-size: 30px;
+  font-family: "UTM BryantLG";
+  color: #B2D235;
+  text-align: center;
+  font-weight: 700;
+}
+.main-courses .card-text {
+  font-size: 14px;
+  font-family: "UTM BryantLG";
+  color: #505353;
+  text-align: center;
+}
+.main-courses .card-text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-align: center;
+}
+.main-courses .btn-card-primary {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "UTM BryantLG";
+  border-radius: 22px;
+  background-color: #6F8710;
+  margin-left: 20%;
+}
+.main-courses .btn-card-primary:hover {
+  color: #7F7F7F;
+}
+.main-courses .other-courses {
+  font-size: 60px;
+  font-family: "UTM BryantLG";
+  font-weight: 700;
+  color: #11114E;
+  text-align: center;
+  -webkit-text-stroke: 2px;
+  padding-bottom: 15px;
+}
+.main-courses .other-courses .courses {
+  border-bottom: 3px solid #B2D235;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.main-courses .courses-boder .css-tutorial {
+  background-color: #24ABE2;
+}
+.main-courses .courses-boder .rails-courses {
+  background-color: #E14E40;
+}
+.main-courses .courses-boder .java-courses {
+  background-color: #1B75BB;
+}
+.main-courses .extend-courses {
+  font-size: 40px;
+  color: #90AB26;
+  font-family: "UTM BryantLG";
+  font-weight: bold;
+  line-height: 49.29px;
+  margin-top: 3%;
+  -webkit-text-stroke: 2px;
+}
+.main-courses .extend-courses .right-arrow {
+  width: 47px;
+  height: 26px;
+}
+.main-courses .extend-courses:hover {
+  transform: scale(1.5);
+}
+
+@media (max-width: 769px) and (min-width: 576px) {
+  .main-courses .card-img-top {
+    height: 131px;
+  }
+
+  .card-body .card-title {
+    font-size: 20px;
+  }
+  .card-body .card-text {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 18px;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+  .card-body .card-text-overflow {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 18px;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+  .card-body .btn-card-primary {
+    font-size: 10px;
+    border-radius: 22px;
+    margin-left: 6%;
+  }
+}
+@media (max-width: 575px) {
+  .main-courses {
+    margin-top: 231px;
+  }
+
+  .card-img-top {
+    height: 163px;
+  }
+
+  .card-body .card-title {
+    font-size: 20px;
+    line-height: 24.12px;
+  }
+  .card-body .card-text {
+    font-size: 14px;
+  }
+  .card-body .btn-card-primary {
+    font-size: 18px !important;
+    margin-left: 33%;
+  }
+
+  .main-courses .extend-courses {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+.why-hapolearn {
+  height: 740px;
+  margin-top: 50px;
+  position: relative;
+}
+.why-hapolearn .background-whyhapolearn {
+  background-image: url(../assets/img/backgroung-whyhapolearn.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.why-hapolearn .img-laptop {
+  position: absolute;
+  background-position: top;
+  width: 478px;
+  height: 478px;
+  top: -24%;
+  transform: rotate(17.12deg);
+  margin-left: -65px;
+}
+.why-hapolearn .banner-whyhapo-answer {
+  color: #ffffff;
+  letter-spacing: -0.05em;
+  font-family: "UTM BryantLG";
+  margin-top: 240px;
+  margin-left: 103px;
+}
+.why-hapolearn .banner-whyhapo-answer .content-whyhapo-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 86px;
+}
+.why-hapolearn .banner-whyhapo-answer .content-whyhapo {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24.5px;
+  margin-left: 30px;
+}
+.why-hapolearn .laptop-and-mobie {
+  background-image: url(../resources/assets/img/transperent.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: -70px;
+}
+
+@media (max-width: 769px) {
+  .why-hapolearn .background-whyhapolearn {
+    height: 395px;
+  }
+  .why-hapolearn .img-laptop {
+    width: 277px;
+    height: 277px;
+    top: -100px;
+    width: 35%;
+  }
+  .why-hapolearn .banner-whyhapo-answer .content-whyhapo-title {
+    font-size: 50px;
+    margin-top: -200px;
+    margin-left: 50px;
+    width: 120%;
+  }
+  .why-hapolearn .banner-whyhapo-answer .content-whyhapo {
+    font-size: 15px;
+    margin-left: -70px;
+    margin-bottom: 36px;
+  }
+  .why-hapolearn .laptop-and-mobie {
+    background-position: bottom;
+    bottom: 35px;
+  }
+}
+@media (max-width: 575px) {
+  .why-hapolearn .background-whyhapolearn {
+    height: 569px;
+    display: flex;
+    flex-direction: column;
+  }
+  .why-hapolearn .img-laptop {
+    width: 60%;
+  }
+  .why-hapolearn .banner-whyhapo-answer .content-whyhapo-title {
+    font-size: 40px;
+    margin-left: 85px;
+    margin-top: -235px;
+  }
+  .why-hapolearn .banner-whyhapo-answer .content-whyhapo {
+    font-size: 13px;
+    width: 150%;
+  }
+  .why-hapolearn .laptop-and-mobie {
+    margin-left: 70px;
+    margin-top: -220px;
+  }
+}
+.feedback {
+  font-family: "UTM BryantLG";
+}
+.feedback .title-underline {
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.feedback .custom-underline-textcourse {
+  font-size: 80px;
+  border-bottom: 6px solid #B2D235;
+}
+.feedback .feedback-intro {
+  width: 705px;
+  color: #505353;
+  font-size: 25px;
+  line-height: 31px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feedback .slick-slider {
+  overflow: visible;
+}
+.feedback .slide-arrow {
+  position: absolute;
+  top: 45%;
+  margin-top: -15px;
+  cursor: pointer;
+  color: #969494;
+}
+.feedback .next-arrow {
+  z-index: 2;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 0.5px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.feedback .prev-arrow {
+  z-index: 2;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 0.5px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.feedback .feedback-border-text {
+  border: 0.5px solid #e2e2e2;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+}
+.feedback .feedback-border-text:before,
+.feedback .feedback-border-text:after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 80px;
+  left: 50px;
+  border: 1px solid #e2e2e2;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+}
+.feedback .feedback-border-text:after {
+  z-index: -1;
+  bottom: 79px;
+  left: 50px;
+}
+.feedback .feedback-text {
+  text-align: start;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+  color: #000000;
+  border-left: 5px solid #D9DADC;
+  margin: 20px;
+  padding: 20px;
+  padding-right: 0px;
+}
+.feedback .user-info {
+  margin-left: 20px;
+  margin-top: 25px;
+}
+.feedback .user-info .user-name {
+  font-size: 20px;
+  line-height: 25px;
+}
+.feedback .user-info .user-role {
+  font-size: 16px;
+  line-height: 20px;
+  color: #505353;
+}
+.feedback .user-info img {
+  width: 60px;
+}
+.feedback .user-info .user-rating {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #F2C54F;
+}
+
+@media (max-width: 769px) {
+  .feedback .title-underline {
+    margin-top: -60%;
+  }
+  .feedback .custom-underline-textcourse {
+    font-size: 50px;
+  }
+  .feedback .feedback-intro {
+    width: 100%;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .feedback .title-underline {
+    margin-top: -30%;
+  }
+  .feedback .custom-underline-textcourse {
+    font-size: 40px;
+  }
+  .feedback .feedback-intro {
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+  }
+}
+.background-banner-become {
+  width: 100%;
+  height: 500px;
+  background-image: url("../resources/assets/img/banner become.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "UTM BryantLG";
+}
+.background-banner-become .content-become {
+  color: #ffffff;
+  width: 705px;
+  font-size: 60px;
+  text-align: center;
+  line-height: 73px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+.background-banner-become .button-become {
+  font-size: 30px;
+  line-height: 36px;
+  color: #90AB26;
+  border-radius: 35px;
+  background-color: #ffffff;
+  margin-top: 3%;
+}
+.background-banner-become .button-become:hover {
+  transform: scale(1.5);
+}
+
+@media (max-width: 769px) {
+  .background-banner-become {
+    width: 100%;
+    height: 267px;
+  }
+  .background-banner-become .content-become {
+    font-size: 35px;
+    line-height: 43px;
+    width: 402px;
+  }
+  .background-banner-become .button-become {
+    font-size: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .background-banner-become {
+    width: 100%;
+    height: 182px;
+    margin-top: 20px;
+  }
+
+  .content-become {
+    width: 291px;
+    font-size: 23px;
+  }
+
+  .button-become {
+    font-size: 18px;
+  }
+}
+.static {
+  width: 100%;
+  height: 574px;
+  font-family: "UTM BryantLG";
+}
+.static .title-static {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 98px;
+  width: 279px;
+  color: #11114E;
+  border-bottom: 6px solid #B2D235;
+  margin-top: 10%;
+}
+.static .information {
+  font-size: 60px;
+  color: #505353;
+  font-weight: 400;
+  text-align: center;
+}
+.static .quantity {
+  font-size: 60px;
+  line-height: 73px;
+  color: #B2D235;
+  text-align: center;
+}
+.static .statistical {
+  margin-top: 5%;
+}
+
+@media (max-width: 769px) {
+  .static {
+    width: 100%;
+    height: 338px;
+  }
+  .static .title-static {
+    font-size: 50px;
+    line-height: 61px;
+    width: 175px;
+  }
+  .static .information {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .static .quantity {
+    font-size: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .static {
+    height: 586px;
+  }
+  .static .title-static {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .static .information {
+    font-size: 40px;
+  }
+  .static .quantity {
+    font-size: 40px;
+  }
+  .static .courses-static,
+.static .lessons-static,
+.static .learners-static {
+    align-items: center;
+  }
+}
+.footer {
+  width: 100%;
+  height: 308px;
+  font-family: "UTM BryantLG";
+  background-color: #505353;
+}
+.footer .info-footer {
+  width: 100%;
+  height: 270px;
+}
+.footer .img-footer-logo {
+  width: 292px;
+  height: 60px;
+}
+.footer .text-logo {
+  font-size: 20px;
+  line-height: 24px;
+  margin-left: 65px;
+  color: #ffffff;
+}
+.footer .footer-mid {
+  margin-top: 5%;
+}
+.footer .footer-text {
+  color: #ffffff !important;
+  font-size: 20px;
+}
+.footer .footer-icon {
+  height: 50px;
+  width: 50px;
+  font-size: 35px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #505353;
+  background-position: center center;
+  background-size: contain;
+  position: relative;
+}
+.footer .fa-facebook-f::before {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+}
+.footer .fa-phone::before {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+}
+.footer .fa-envelope::before {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.footer .footer-final {
+  height: 38px;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #454545;
+}
+
+@media (max-width: 769px) {
+  .footer {
+    width: 100%;
+    height: 256px;
+  }
+  .footer .info-footer {
+    width: 100%;
+    height: 218px;
+  }
+  .footer .img-footer-logo {
+    width: 170px;
+    height: 35px;
+  }
+  .footer .text-logo {
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 0px;
+  }
+  .footer .footer-text {
+    font-size: 18px;
+  }
+  .footer .footer-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .footer .fa-facebook-f::before {
+    top: 7px;
+    right: 5px;
+  }
+  .footer .fa-phone::before {
+    top: 7px;
+    right: 5px;
+  }
+  .footer .fa-envelope::before {
+    top: 2px;
+    right: 2px;
+  }
+  .footer .footer-final {
+    font-size: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .footer {
+    width: 100%;
+    height: 391px;
+  }
+  .footer .info-footer {
+    height: 353px;
+    display: flex;
+  }
+  .footer .footer-mid {
+    order: 1;
+  }
+  .footer .footer-logo {
+    order: 2;
+  }
+  .footer .footer-contact {
+    order: 3;
+  }
+  .footer .img-footer-logo {
+    width: 150px;
+    height: 30px;
+  }
+  .footer .text-logo {
+    font-size: 14px;
+  }
+  .footer .footer-text {
+    font-size: 17px;
+  }
+  .footer .footer-text-right {
+    margin-right: 150px;
+  }
+  .footer .footer-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+  }
+  .footer .fa-facebook-f::before {
+    top: 7px;
+    right: 10px;
+  }
+  .footer .fa-phone::before {
+    top: 6px;
+  }
+  .footer .fa-envelope::before {
+    top: 4px;
+    right: 4px;
+  }
+  .footer .footer-final {
+    height: 38px;
+    font-size: 15px;
+  }
+}
+.login-register {
+  width: 430px;
+  height: 670px;
+  font-family: "UTM BryantLG";
+}
+.login-register .nav-tab {
+  height: 70px;
+}
+.login-register .nav-item {
+  width: 50%;
+  margin-left: 0px;
+  border-bottom: none;
+}
+.login-register .nav-link {
+  text-align: center;
+  font-size: 25px;
+  color: #B2D235;
+  background-color: #ffffff;
+  line-height: 50px;
+}
+.login-register .nav-link.active {
+  background-color: #B2D235;
+  color: #ffffff;
+}
+.login-register .button-close {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  top: -15px;
+  right: -15px;
+  opacity: 1;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.login-register .button-close:hover {
+  opacity: 0.6;
+}
+.login-register .body-login {
+  width: 400px;
+}
+.login-register .body-login .form-group {
+  font-size: 20px;
+  line-height: 24px;
+}
+.login-register .body-login .form-control {
+  width: 370px;
+  height: 60px;
+}
+.login-register .body-login .password {
+  margin-top: 30px;
+}
+.login-register .body-login .form-check {
+  width: 370px;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 22px;
+  position: relative;
+}
+.login-register .body-login .form-check-input .custom-check-label:before {
+  background-color: #B2D235;
+}
+.login-register .body-login .forgot-pass {
+  position: absolute;
+  right: 0;
+  color: #B2D235;
+}
+.login-register .body-login .btn-login {
+  width: 200px;
+  height: 42px;
+  margin-top: 45px;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 22px;
+  color: #ffffff;
+  background-color: #B2D235;
+}
+.login-register .body-login .login-with-btn {
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+.login-register .body-login .google {
+  width: 370px;
+  height: 55px;
+  font-size: 20px;
+  background-color: #DC4E41;
+  color: #ffffff;
+  margin-top: 15px;
+}
+.login-register .body-login .google-icon {
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: 15%;
+}
+.login-register .body-login .facebook {
+  width: 370px;
+  height: 55px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #3b5999;
+  margin-top: 27px;
+}
+.login-register .body-login .facebook-icon {
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: 15%;
+}
+.login-register .body-register {
+  width: 400px;
+}
+.login-register .form-group {
+  font-size: 20px;
+  line-height: 24px;
+}
+.login-register .form-control {
+  width: 370px;
+  height: 60px;
+}
+.login-register .password {
+  margin-top: 30px;
+}
+.login-register .email,
+.login-register .repeat-password {
+  margin-top: 30px;
+}
+.login-register .btn-register {
+  width: 200px;
+  height: 42px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: #B2D235;
+  border-radius: 22px;
+  margin-top: 30px;
+}
+
+@media (max-width: 575px) {
+  .login-register {
+    width: 80%;
+  }
+  .login-register .body-login {
+    width: 320px;
+  }
+  .login-register .body-login .form-control {
+    width: 296px;
+  }
+  .login-register .body-login .form-check {
+    width: 296px;
+    font-size: 15px;
+  }
+  .login-register .body-login .google {
+    width: 296px;
+  }
+  .login-register .body-login .facebook {
+    width: 296px;
+  }
+  .login-register .body-register {
+    width: 320px;
+  }
+  .login-register .body-register .form-control {
+    width: 296px;
+  }
+}
+.messenger {
+  position: fixed;
+  bottom: 90px;
+  right: 50px;
+}
+.messenger .chatbox {
+  width: 360px;
+  height: 190px;
+  border-radius: 23px;
+  background-color: #ffffff;
+}
+.messenger .close-chatbox {
+  float: right;
+  margin-top: 13px;
+  margin-right: 13px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  cursor: pointer;
+}
+.messenger .close-chatbox:hover {
+  color: #ffffff;
+}
+.messenger .title-chatbox {
+  font-size: 12px;
+  color: #7F7F7F;
+  line-height: 16px;
+  letter-spacing: -0.05em;
+  padding-top: 13px;
+  margin-left: 65px;
+}
+.messenger .logo-chatbox {
+  width: 28px;
+  height: 28px;
+  margin-top: 10px;
+  margin-left: 13px;
+}
+.messenger .text-chatbox {
+  width: 256px;
+  height: 53px;
+  font-size: 12px;
+  line-height: 17px;
+  border-radius: 15px;
+  background-color: #F1F0F0;
+  margin-left: 12px;
+  padding: 10px 0px 10px 12px;
+  letter-spacing: -0.02em;
+}
+.messenger .login-messenger {
+  width: 276px;
+  height: 37px;
+  margin-top: 15px;
+  margin-left: 41px;
+  border-radius: 10px;
+  background-color: #3184F7;
+}
+.messenger .chatbox-end {
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  margin-top: 10px;
+}
+.messenger .logo-messenger {
+  position: fixed;
+  bottom: 25px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 575px) {
+  .messenger .logo-messenger {
+    width: 50px;
+    height: 50px;
+  }
+}
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

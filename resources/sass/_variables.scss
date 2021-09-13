@@ -17,3 +17,57 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+@font-face {
+    font-family: 'GooglrSans-Black';
+    src: url('../assets/font/GoogleSans-Black.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GoogleSans-BlackItalic';
+    src: url('../assets/font/GoogleSans-BlackItalic.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GoogleSans-Bold';
+    src: url('../assets/font/GoogleSans-Bold.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GoogleSans-Italic';
+    src: url('../assets/font/GoogleSans-Italic.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'UTM\ BryantLG';
+    src: url('../assets/font/UTM\ BryantLG.ttf') format('opentype');
+  }
+
+  $font_UTM_BryantLG : "UTM\ BryantLG";
+  $navlink_color : #10e010;
+  $white_color : #ffffff;
+  $content_hapolearn_title : #11114E;
+  $content_hapolearn : #505353;
+  $background_button_hapolearn_banner : #B2D235;
+  $frontend-courses-color : #3F6185;
+  $laravel-courses-color : #DC594C;
+  $php-courses-color : #556598;
+  $card-title_color : #B2D235;
+  $background-border-btn-card : #6F8710;
+  $background-css-tutorial : #24ABE2;
+  $background-rails-tutorial : #E14E40;
+  $background-java-tutorial : #1B75BB;
+  $text-expend-courses-color : #90AB26;
+  $boder-left-content : #D9DADC;
+  $star-color : #F2C54F;
+  $boder-aroww-circle : #c4c4c4;
+  $background-color-footer-final : #454545;
+  $backgroud-google : #DC4E41;
+  $backgroud-facebook : #3b5999;
+  $backgroud-messenger : #2774DF;
+  $color-title-chatbox : #7F7F7F;
+  $color-backgroud-textchatbox : #F1F0F0;
+  $background-color-btn-messenger : #3184F7;
+  $color-gray-arrow : #969494 ;
+  $color-border-text : #e2e2e2;
+  $color-text-feedback : #000000;

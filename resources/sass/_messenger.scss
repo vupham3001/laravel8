@@ -1,0 +1,89 @@
+.messenger {
+  position: fixed;
+  bottom: 90px;
+  right: 50px;
+
+  .chatbox {
+    width: 360px;
+    height: 190px;
+    border-radius: 23px;
+    background-color: $white_color;
+  }
+
+  .close-chatbox {
+    float: right;
+    margin-top: 13px;
+    margin-right: 13px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $boder-aroww-circle;
+    cursor: pointer;
+  }
+
+  .close-chatbox:hover {
+    color: $white_color;
+  }
+
+  .title-chatbox {
+    font-size: 12px;
+    color: $color-title-chatbox;
+    line-height: 16px;
+    letter-spacing: -0.05em;
+    padding-top: 13px;
+    margin-left: 65px;
+  }
+
+  .logo-chatbox {
+    width: 28px;
+    height: 28px;
+    margin-top: 10px;
+    margin-left: 13px;
+  }
+
+  .text-chatbox {
+    width: 256px;
+    height: 53px;
+    font-size: 12px;
+    line-height: 17px;
+    border-radius: 15px;
+    background-color: $color-backgroud-textchatbox;
+    margin-left: 12px;
+    padding: 10px 0px 10px 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .login-messenger {
+    width: 276px;
+    height: 37px;
+    margin-top: 15px;
+    margin-left: 41px;
+    border-radius: 10px;
+    background-color: $background-color-btn-messenger;
+  }
+
+  .chatbox-end {
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+  }
+
+  .logo-messenger {
+    position: fixed;
+    bottom: 25px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 575px) {
+  .messenger {
+    .logo-messenger {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
