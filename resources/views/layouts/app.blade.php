@@ -16,7 +16,7 @@
 <body>
     <div id="app">
         <!-- Header -->
-        @include('admin.header')
+        @include('layouts.header')
         <!-- /Header -->
 
         <!-- content -->
@@ -24,14 +24,14 @@
         <!-- /content -->
 
         <!-- footer -->
-        @include('admin.footer')
+        @include('layouts.footer')
         <!-- /footer -->
 
         <!-- Login/Register -->
         @include('components.authentication')
 
         <!-- chatbox -->
-        @include('admin.chatbox')
+        @include('contact.chatbox')
     </div>
 
     <!-- Script -->

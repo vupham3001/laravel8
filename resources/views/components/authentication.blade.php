@@ -1,4 +1,4 @@
-<div class="modal fade" id="myModal">
+<div class="modal fade" id="loginRegisterModal">
     <div class="modal-dialog">
         <div class="modal-content login-register">
 

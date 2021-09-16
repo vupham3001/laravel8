@@ -27,23 +27,23 @@ $(function() {
     ]
   });
 
-  $(".footer-iconandlink").mouseover(function() {
-    $( "#imgContact", this ).removeClass("txt-hidden").addClass( "readmore");
+  $('.footer-iconandlink').mouseover(function() {
+    $( '#imgContact').removeClass('txt-hidden').addClass( 'readmore');
   });
 
-  $(".footer-iconandlink").mouseout(function() {
-    $( "#imgContact", this ).removeClass("readmore").addClass("txt-hidden");
+  $('.footer-iconandlink').mouseout(function() {
+    $( 'imgContact').removeClass('readmore').addClass('txt-hidden');
   });
 
-  $(".login").click(function() {
-    $("#myModal").modal();
+  $('.login').click(function() {
+    $('#loginRegisterModal').modal();
   });
 
-  $(".close-chatbox").click(function() {
-    $("#messenger").toggle("slow");
+  $('.close-chatbox').click(function() {
+    $('#messenger').toggle('slow');
   });
 
-  $(".logo-messenger").click(function() {
-    $("#messenger").slideToggle("slow");
+  $('.logo-messenger').click(function() {
+    $('#messenger').slideToggle('slow');
   });
 });
