@@ -49,11 +49,12 @@ $(function() {
 
   if($('#register input').hasClass('is-invalid')) {
     $('#loginRegisterModal').modal('show');
-    $('#register-nav-tab').trigger('click');
+    $('#registernavtab').trigger('click');
   }
 
   if($('#login input').hasClass('is-invalid')) {
     $('#loginRegisterModal').modal('show');
-    $('#login-nav-tab').trigger('click');
+    $('#loginnavtab').trigger('click');
   }
 });
+

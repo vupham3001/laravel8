@@ -6,10 +6,10 @@
 
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a id="login-nav-tab" class="login-nav-tab nav-link active" data-toggle="tab" href="#login">LOGIN</a>
+                        <a id="loginnavtab" class="loginnavtab nav-link active" data-toggle="tab" href="#login">LOGIN</a>
                     </li>
                     <li class="nav-item">
-                        <a id="register-nav-tab" class="register-nav-tab nav-link" data-toggle="tab" href="#register">REGISTER</a>
+                        <a id="registernavtab" class="registernavtab nav-link" data-toggle="tab" href="#register">REGISTER</a>
                     </li>
                     <button type="button" class="close button-close" data-dismiss="modal" aria-label="Close">
                         <img src="./assets/img/button-close.png" alt="button-close">

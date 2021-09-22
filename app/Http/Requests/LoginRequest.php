@@ -32,8 +32,8 @@ class LoginRequest extends FormRequest
     public function messages()
     {
         return [
-            'username.required' => 'Vui lòng nhập username',
-            'password.required' => 'Vui lòng nhập password'
+            'username.required' => 'please enter username',
+            'password.required' => 'please enter password'
         ];
     }
 }

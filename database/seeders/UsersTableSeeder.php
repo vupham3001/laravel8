@@ -15,10 +15,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => 'Hapo Tester5',
-            'email' => 'test5@haposoft.com',
-            'password' => bcrypt('12345678'),
+        User::create([
+            'name' => 'Hapo Tester',
+            'email' => 'test@haposoft.com',
+            'password' => bcrypt('12345678')
         ]);
     }
 }
