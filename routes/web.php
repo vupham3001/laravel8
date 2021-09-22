@@ -22,10 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::namespace('App\Http\Controllers\Auth')->group(function() {
-//     Route::get('login', [Auth\LoginController::class, 'login'])->name('login');
-// });
-
 Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
 
 Route::post('register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register');
