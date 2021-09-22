@@ -20,7 +20,7 @@ class CreateCoursesTable extends Migration
             $table->string('introduction', 255)->nullable();
             $table->string('description', 255)->nullable();
             $table->float('learn_time')->nullable();
-            $table->bigIncrements('quizzes')->nullable();
+            $table->bigInteger('quizzes')->nullable();
             $table->integer('price')->nullable();
             $table->softDeletes();
             $table->timestamps();

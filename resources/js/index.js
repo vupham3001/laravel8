@@ -46,4 +46,14 @@ $(function() {
   $('.logo-messenger').click(function() {
     $('#messenger').slideToggle('slow');
   });
+
+  if($('#register input').hasClass('is-invalid')) {
+    $('#loginRegisterModal').modal('show');
+    $('#register-nav-tab').trigger('click');
+  }
+
+  if($('#login input').hasClass('is-invalid')) {
+    $('#loginRegisterModal').modal('show');
+    $('#login-nav-tab').trigger('click');
+  }
 });

@@ -32,7 +32,7 @@ class UpdateUsersTable extends Migration
             $table->dropColumn('birthday');
             $table->dropColumn('phone');
             $table->dropColumn('role');
-            $table->dropSoftDeletes();
+            $table->dropColumn('deleted_at');
         });
     }
 }

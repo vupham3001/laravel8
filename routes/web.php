@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Backend\HapolearnController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::namespace('App\Http\Controllers\Auth')->group(function() {
+//     Route::get('login', [Auth\LoginController::class, 'login'])->name('login');
+// });
+
+Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
+
+Route::post('register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register');
