@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Auth;
 use App\Http\Requests\RegisterRequest;
+use Illuminate\Http\Request;
 use App\Providers\RouteServiceProvider;
 
 class RegisterController extends Controller
@@ -39,7 +40,8 @@ class RegisterController extends Controller
 
     public function register(RegisterRequest $request)
     {
-        if ($this->create($request)) {
+        if ($data = $this->create($request)) {
+            Auth::login($data);
             return redirect('/')->with('success', 'The new account created successfully! Let is login!');
         } else {
             return back()->with('error', 'Error Register');

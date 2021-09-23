@@ -50,9 +50,9 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($data)) {
-            return redirect('/home');
+            return redirect('/');
         } else {
-            return redirect()->back()->with('status', 'Username or password is incorrect');
+            return redirect()->back()->with('error', 'Username or password is incorrect');
         }
     }
 
