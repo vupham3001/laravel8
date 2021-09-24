@@ -56,5 +56,13 @@ $(function() {
     $('#loginRegisterModal').modal('show');
     $('#tablogin').trigger('click');
   }
+
+  $('#btnFilter').click(function() {
+    if($('.colapse').hasClass('d-none')){
+      $('.colapse').removeClass('d-none').addClass('d-flex');
+    } else {
+      $('.colapse').addClass('d-none').removeClass('d-flex');
+    }
+  });
 });
 

@@ -9,8 +9,8 @@
             </a>
             <div class="collapse navbar-collapse ml-auto" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link nav-link-active active" href="">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">ALL COURSE</a></li>
+                    <li class="nav-item active"><a class="nav-link nav-link-active active" href="{{route('home')}}">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('all-courses') }}">ALL COURSE</a></li>
                     @guest
                         @if (Route::has('login') || Route::has('register'))
                         <li class="nav-item"><a class="nav-link header-nav" href="{{ route('login') }}" data-toggle="modal" data-target="#loginRegisterModal">LOGIN/REGISTER</a></li>

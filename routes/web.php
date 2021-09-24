@@ -22,3 +22,5 @@ Route::namespace('App\Http\Controllers\Auth')->group(function () {
     Route::post('login', 'LoginController@login')->name('login');
     Route::post('register', 'RegisterController@register')->name('register');
 });
+
+Route::get('/allcourses', [App\Http\Controllers\AllCoursesController::class, 'index'])->name('all-courses');

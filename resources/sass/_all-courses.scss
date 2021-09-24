@@ -1,0 +1,119 @@
+  .all-courses {
+  font-family: $font_UTM_BryantLG;
+  margin-top: 40px;
+  margin-bottom: 110px;
+
+  .btn-filter {
+      width: 100px;
+      height: 40px;
+      font-size: 15px;
+      border-radius: 5px;
+      border: 1px solid $boder-aroww-circle;
+      color: $color-text-feedback;
+  }
+
+  .search-input {
+      margin-left: 15px;
+      width: 335px;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 15px;
+  }
+
+  .fa-search {
+      width: 19px;
+      height: 23px;
+      margin-left: -30px;
+  }
+
+  .btn-search {
+      width: 100px;
+      height: 40px;
+      background-color: $background_button_hapolearn_banner;
+      color: $white_color;
+      font-size: 15px;
+      border-radius: 5px;
+      margin-left: 10px;
+  }
+
+  .colapse-filter {
+      width: 1169px;
+      height: 109px;
+      border-radius: 5px;
+      border: 1px solid $boder-aroww-circle;
+      margin-top: 20px;
+
+      .colapse-title {
+      margin-top: 19px;
+      margin-left: 19px;
+      font-size: 16px;
+      font-weight: bold;
+      }
+
+      .form-check-input {
+      width: 101px;
+      height: 34px;
+      background-color: $form-check-input-color;
+      font-size: 14px;
+      margin-left: 10px;
+      margin-top: 13px;
+      border-radius: 2px;
+      }
+
+      .form-check-input:hover {
+      background-color: $card-title_color;
+      color: $white_color;
+      }
+
+      .teacher, .learn-number, .learn-time, .number-lesson, .tags, .review {
+      width: 180px;
+      height: 34px;
+      border: 1px solid $form-check-input-color;
+      font-size: 14px;
+      margin-left: 10px;
+      margin-top: 15px;
+      }
+  }
+
+  .list-courses {
+      margin-top: 30px;
+
+      .list-courses-img {
+      width: 90px;
+      height: 90px;
+      }
+
+      .list-courses-title {
+      font-size: 25px;
+      font-weight: 700;
+      margin-left: 30px;
+      }
+
+      .list-courses-intro {
+      font-size: 18px;
+      margin-left: 30px;
+      }
+
+      .btn-list-courses {
+      width: 70px;
+      border-radius: 22px;
+      background-color: $card-title_color;
+      color: $white_color;
+      margin-top: 10px;
+      margin-left: 410px;
+      }
+
+      .name-statistic {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 25px;
+      }
+
+      .quantity-statistic {
+      font-size: 30px;
+      color: $card-title_color;
+      font-weight: bold;
+      margin-top: 4px;
+      }
+  }
+}

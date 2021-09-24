@@ -1,12 +1,12 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title', 'Courses')
 
 @section('content')
-<div class="all-courses" id="all-courses">
+    <div class="all-courses" id="all-courses">
         <div class="container">
             <div class="search d-flex">
-                <form class="form-inline">
+                <form class="form-inline" method="GET" action="{{ route('all-courses') }}">
                     <a class="btn btn-filter" id="btnFilter" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                         <i class="fas fa-sliders-h"></i>
                         <span>Filter</span>
