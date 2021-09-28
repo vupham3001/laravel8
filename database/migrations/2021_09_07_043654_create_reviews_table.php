@@ -16,7 +16,7 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('target_id');
-            $table->integer('type')->nullable();
+            $table->integer('type', 1)->nullable();
             $table->string('content', 255)->nullable();
             $table->float('rate')->nullable();
             $table->integer('location')->nullable();

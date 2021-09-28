@@ -40,11 +40,10 @@ class RegisterController extends Controller
 
     public function register(RegisterRequest $request)
     {
-        if ($data = $this->create($request)) {
-            Auth::login($data);
-            return redirect('/')->with('success', 'The new account created successfully! Let is login!');
-        } else {
-            return back()->with('error', 'Error Register');
-        }
+        $user = $this->create($request);
+
+        Auth::login($user);
+
+        return redirect('/')->with('success', 'The new account created successfully! Let is login!');
     }
 }
