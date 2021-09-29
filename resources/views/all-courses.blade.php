@@ -6,7 +6,7 @@
     <div class="all-courses" id="all-courses">
         <div class="container">
             <div class="search d-flex">
-                <form class="form-inline" method="GET" action="{{ route('all-courses') }}">
+                <form class="form-inline" method="GET" action="{{ route('coursesSearch') }}">
                     <a class="btn btn-filter" id="btnFilter" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                         <i class="fas fa-sliders-h"></i>
                         <span>Filter</span>
@@ -60,37 +60,36 @@
 
             <div class="list-courses">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card mb-5">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <img class="list-courses-img" src="./assets/img/Ellipse 10.png" alt="list-courses-img">
-                                    <div class="">
-                                        <div class="list-courses-title">HTML Fundamentals</div>
-                                        <div class="list-courses-intro">Practice during lessons, practice between lessons,
-                                            practice whenever you can. Master the task, then reinforce and test your knowledge
-                                            with fun, hands-on exercises and interactive quizzes.
+                    @foreach($courses as $key => $course)
+                        <div class="col-sm-6">
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <img class="list-courses-img" src="{{$course->logo_path}}" alt="list-courses-img">
+                                        <div class="">
+                                            <div class="list-courses-title">{{$course->title}}</div>
+                                            <div class="list-courses-intro">{{$course->introduction}}</div>
                                         </div>
                                     </div>
-                                </div>
-                                <input class="btn-list-courses" type="submit" value="More">
-                                <div class="row d-flex justify-content-center align-items-center list-courses-statistic">
-                                    <div class="col-sm-4">
-                                        <div class="name-statistic">Learners</div>
-                                        <div class="quantity-statistic">1568</div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="name-statistic">Lessons</div>
-                                        <div class="quantity-statistic">2689</div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="name-statistic">Times</div>
-                                        <div class="quantity-statistic">100h</div>
+                                    <input class="btn-list-courses" type="submit" value="More">
+                                    <div class="row d-flex justify-content-center align-items-center list-courses-statistic">
+                                        <div class="col-sm-4">
+                                            <div class="name-statistic">Learners</div>
+                                            <div class="quantity-statistic">1568</div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="name-statistic">Lessons</div>
+                                            <div class="quantity-statistic">2689</div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="name-statistic">Times</div>
+                                            <div class="quantity-statistic">{{$course->learn_time}} (h)</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

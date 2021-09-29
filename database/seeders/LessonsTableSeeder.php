@@ -4,14 +4,12 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
-<<<<<<< HEAD
-=======
 use Faker\Factory as Faker;
-use database\factories\UserFactory;
->>>>>>> f3270c5 (commit)
+use App\Models\Course;
+use App\Models\Lesson;
+use database\factories\CourseFactory;
 
-class UsersTableSeeder extends Seeder
+class LessonsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,6 +18,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->count(3)->create();
+        Lesson::factory()->count(3)->create();
     }
 }

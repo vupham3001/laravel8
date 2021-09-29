@@ -24,3 +24,5 @@ Route::namespace('App\Http\Controllers\Auth')->group(function () {
 });
 
 Route::get('/allcourses', [App\Http\Controllers\AllCoursesController::class, 'index'])->name('all-courses');
+
+Route::get('/coursesSearch', [App\Http\Controllers\AllCoursesController::class, 'coursesSearch'])->name('coursesSearch');
