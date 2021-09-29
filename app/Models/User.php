@@ -6,9 +6,14 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
+    const ROLE_STUDENT = 0;
+    const ROLE_TEACHER = 1;
+    const ROLE_ADMIN = 2;
+
     use HasFactory, Notifiable, SoftDeletes;
 
     protected $table = 'users';

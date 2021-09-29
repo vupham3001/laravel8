@@ -46,4 +46,15 @@ $(function() {
   $('.logo-messenger').click(function() {
     $('#messenger').slideToggle('slow');
   });
+
+  if($('#register input').hasClass('is-invalid')) {
+    $('#loginRegisterModal').modal('show');
+    $('#tabregister').trigger('click');
+  }
+
+  if($('#login input').hasClass('is-invalid')) {
+    $('#loginRegisterModal').modal('show');
+    $('#tablogin').trigger('click');
+  }
 });
+
