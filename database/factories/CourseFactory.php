@@ -25,13 +25,12 @@ class CourseFactory extends Factory
     {
         return [
             'title' => $this->faker->title(),
-            'logo_path' => './resources/assets/img/Elipse_html.png',
+            'logo_path' => $this->faker->imageUrl(),
             'description' => $this->faker->realText(),
             'introduction' => $this->faker->realText(),
             'learn_time' => $this->faker->randomDigitNotNull(),
             'quizzes' => $this->faker->randomDigit(),
             'price' => $this->faker->randomDigit(),
-
         ];
     }
 }

@@ -85,6 +85,7 @@
     .list-courses-img {
     width: 90px;
     height: 90px;
+    border-radius: 50%;
     }
 
     .list-courses-title {
@@ -119,5 +120,27 @@
     font-weight: bold;
     margin-top: 4px;
     }
+  }
+
+  .pagination {
+    position: absolute;
+    right: 13%;
+  }
+
+  .page-item {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .page-link {
+    background-color: $color-page-link;
+    color: $card-title_color;
+  }
+}
+
+.page-item.active {
+  .page-link {
+    background-color: $card-title_color;
   }
 }

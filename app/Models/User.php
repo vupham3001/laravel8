@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -53,11 +54,16 @@ class User extends Authenticatable
 
     public function courses()
     {
-        return $this->belongsToMany(Course::class, 'course_users');
+        return $this->belongsToMany(Course::class, 'course_users', 'course_id', 'user_id');
     }
 
     public function lessons()
     {
         return $this->belongsToMany(Lesson::class, 'lesson_users');
+    }
+
+    public function scopeTeachers($query)
+    {
+        $query->where('role', config('config.role.teacher'));
     }
 }

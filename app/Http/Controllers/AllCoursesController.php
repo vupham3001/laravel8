@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\Paginator;
 
 class AllCoursesController extends Controller
 {
@@ -22,21 +24,18 @@ class AllCoursesController extends Controller
         ]);
     }
 
-    public function index()
+    public function index(Request $request)
     {
+        $data = $request->input();
+        // dd($data);
+
         $tags = Tag::all();
-        $courses = Course::all();
-        $course = DB::table('courses')->Paginate(6);
+        // dd($data);
 
-        return view('all-courses', ['courses' => $courses, 'courses'=>$course]);
-    }
+        $courses = Course::filter($data)->paginate(10);
 
-    public function coursesSearch(Request $request)
-    {
-        $key = $request->key;
-        $courses = Course::where('title', 'like', "%$key%")
-                        ->orWhere('introduction', 'like', "%$key%")->take(15)->paginate(3);
+        $teachers = User::teachers()->get();
 
-        return view('all-courses', ['courses' => $courses, 'key' => $key]);
+        return view('all-courses', compact('courses', 'tags', 'teachers'));
     }
 }
