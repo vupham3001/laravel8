@@ -82,7 +82,10 @@
                                             <div class="list-courses-intro">{{$course->introduction}}</div>
                                         </div>
                                     </div>
-                                    <input class="btn-list-courses" type="submit" value="More">
+                                    <div class="btn-list-courses d-flex justify-content-center alight-item-center">
+                                        <a class="btn-course-detail" href="{{ route('courseDetail') }}">More</a>
+                                    </div>
+                                    <!-- <input class="btn-list-courses" type="submit" value=Mo"re"> -->
                                     <div class="row d-flex justify-content-center align-items-center list-courses-statistic">
                                         <div class="col-sm-4">
                                             <div class="name-statistic">Learners</div>

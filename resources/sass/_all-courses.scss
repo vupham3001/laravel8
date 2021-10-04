@@ -101,11 +101,16 @@
 
     .btn-list-courses {
     width: 70px;
+    height: 30px;
     border-radius: 22px;
     background-color: $card-title_color;
     color: $white_color;
     margin-top: 10px;
     margin-left: 410px;
+    }
+
+    .btn-course-detail {
+      color: $white_color;
     }
 
     .name-statistic {
