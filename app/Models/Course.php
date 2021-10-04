@@ -63,14 +63,14 @@ class Course extends Model
     {
         if (isset($data['key'])) {
             $query = $query->where('title', 'like', '%'.$data['key'].'%')
-                  ->orWhere('introduction', 'like', '%'.$data['key'].'%')->take(15)->paginate(10);
+                  ->orWhere('introduction', 'like', '%'.$data['key'].'%');
         }
 
         if (isset($data['status'])) {
             if ($data['status'] == config('config.option.newest')) {
                 $query = $query->orderByDesc('id');
             } elseif ($data['status'] == config('config.option.oldest')) {
-                $query = $query->orderBy('id', 'ASC');
+                $query = $query->orderBy('id');
             }
         }
 

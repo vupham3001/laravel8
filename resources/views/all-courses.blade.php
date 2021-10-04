@@ -38,25 +38,25 @@
                                     </select>
                                     <select class="learn-number" name="learn_number" id="learn-number">
                                         <option value="">Number Learners</option>
-                                        <option value="asc"{{request('learn_number') == config('config.option.asc') ? 'selected' : ''}}>ascending</option>
-                                        <option value="desc" {{request('learn_number') == config('config.option.desc') ? 'selected' : ''}}>decrease</option>
+                                        <option value="{{config('config.option.asc')}}"{{request('learn_number') == config('config.option.asc') ? 'selected' : ''}}>ascending</option>
+                                        <option value="{{config('config.option.desc')}}" {{request('learn_number') == config('config.option.desc') ? 'selected' : ''}}>decrease</option>
                                     </select>
                                     <select class="learn-time" name="learn_times" id="Learn_time">
                                         <option value="">Number Times</option>
-                                        <option value="asc" {{request('learn_times') == config('config.option.asc') ? 'selected' : ''}}>ascending</option>
-                                        <option value="desc"{{request('learn_times') == config('config.option.desc') ? 'selected' : ''}}>decrease</option>
+                                        <option value="{{config('config.option.asc')}}" {{request('learn_times') == config('config.option.asc') ? 'selected' : ''}}>ascending</option>
+                                        <option value="{{config('config.option.desc')}}"{{request('learn_times') == config('config.option.desc') ? 'selected' : ''}}>decrease</option>
                                     </select>
                                     <select class="number-lesson" name="number_lesson" id="number-lesson">
                                         <option value="">Number Lessons</option>
-                                        <option value="asc" {{request('numbber_lesson') == config('config.option.asc') ? 'selected' : ''}}>ascending</option>
-                                        <option value="desc" {{request('numbber_lesson') == config('config.option.desc') ? 'selected' : ''}}>decrease</option>
+                                        <option value="{{config('config.option.asc')}}" {{request('numbber_lesson') == config('config.option.asc') ? 'selected' : ''}}>ascending</option>
+                                        <option value="{{config('config.option.desc')}}" {{request('numbber_lesson') == config('config.option.desc') ? 'selected' : ''}}>decrease</option>
                                     </select>
                                 </div>
                                 <div class="bot-line d-flex">
                                     <select class="tags" name="tag" id="tags">
                                         <option value="">Tags</option>
                                         @foreach($tags as $tag)
-                                        <option class="" value="{{$tag->id}}" {{ request('tag') == $tag->id ? 'selected' : ''}}>{{$tag->name}}</option>
+                                        <option class="" value="{{$tag->id}}" {{ request('tag') == $tag->id ? 'selected' : ''}}>{{ $tag->name }}</option>
                                         @endforeach
                                     </select>
                                     <select class="review" name="review" id="review">
@@ -72,34 +72,7 @@
             <div class="list-courses">
                 <div class="row">
                     @foreach($courses as $course)
-                        <div class="col-sm-6">
-                            <div class="card mb-5">
-                                <div class="card-body">
-                                    <div class="d-flex">
-                                        <img class="list-courses-img" src="{{$course->logo_path}}" alt="{{$course->title}}">
-                                        <div class="">
-                                            <div class="list-courses-title">{{$course->title}}</div>
-                                            <div class="list-courses-intro">{{$course->introduction}}</div>
-                                        </div>
-                                    </div>
-                                    <input class="btn-list-courses" type="submit" value="More">
-                                    <div class="row d-flex justify-content-center align-items-center list-courses-statistic">
-                                        <div class="col-sm-4">
-                                            <div class="name-statistic">Learners</div>
-                                            <div class="quantity-statistic">{{$course->number_users}}</div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="name-statistic">Lessons</div>
-                                            <div class="quantity-statistic">{{$course->number_lessons}}</div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="name-statistic">Times</div>
-                                            <div class="quantity-statistic">{{$course->total_times}} (h)</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @include('courses.list-courses')
                     @endforeach
                 </div>
             </div>

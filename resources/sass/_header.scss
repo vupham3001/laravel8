@@ -16,6 +16,11 @@
 
   .navbar-nav {
     margin-right: 130px;
+
+    .nav-link.active {
+      color: $white_color;
+      background-color: $card-title_color;
+    }
   }
 
   .nav-item {
@@ -32,11 +37,6 @@
   }
 
   .nav-link:hover {
-    background-color: $card-title_color;
-    color: $white_color !important;
-  }
-
-  .nav-link-active {
     background-color: $card-title_color;
     color: $white_color !important;
   }

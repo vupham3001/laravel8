@@ -1,5 +1,7 @@
 <?php
 return [
+    'paginate' => '10',
+
     'role' => [
         'teacher' => 1,
         'student' => 0,

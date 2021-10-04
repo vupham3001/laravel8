@@ -4,13 +4,13 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="header-logo navbar-branch" href="#">
+            <a class="header-logo navbar-branch" href="{{ route('home') }}">
                 <img src="./assets/img/Hapolearn_header.png" alt="HapoLearn">
             </a>
             <div class="collapse navbar-collapse ml-auto" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link nav-link-active active" href="{{route('home')}}">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('all-courses') }}">ALL COURSE</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-active active {{ Route::currentRouteName() == 'home' ? 'active' : '' }}" href="{{route('home')}}">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link {{ Route::currentRouteName() == 'all-courses' ? 'active' : '' }}" href="{{ route('all-courses') }}">ALL COURSE</a></li>
                     @guest
                         @if (Route::has('login') || Route::has('register'))
                         <li class="nav-item"><a class="nav-link header-nav" href="{{ route('login') }}" data-toggle="modal" data-target="#loginRegisterModal">LOGIN/REGISTER</a></li>

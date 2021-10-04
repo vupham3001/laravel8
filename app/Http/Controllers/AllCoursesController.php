@@ -27,12 +27,10 @@ class AllCoursesController extends Controller
     public function index(Request $request)
     {
         $data = $request->input();
-        // dd($data);
 
         $tags = Tag::all();
-        // dd($data);
 
-        $courses = Course::filter($data)->paginate(10);
+        $courses = Course::filter($data)->paginate(config('config.paginate'));
 
         $teachers = User::teachers()->get();
 
