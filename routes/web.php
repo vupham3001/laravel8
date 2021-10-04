@@ -23,7 +23,7 @@ Route::namespace('App\Http\Controllers\Auth')->group(function () {
     Route::post('register', 'RegisterController@register')->name('register');
 });
 
-Route::namespace('App\Http\Controllers')->group(function() {
+Route::namespace('App\Http\Controllers')->group(function () {
     Route::get('/allcourses', 'AllCoursesController@index')->name('all-courses');
     Route::get('/coursesSearch', 'AllCoursesController@index')->name('coursesSearch');
 });
