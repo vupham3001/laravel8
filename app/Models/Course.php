@@ -61,13 +61,13 @@ class Course extends Model
 
     public function scopeFilter($query, $data)
     {
-        if(isset($data['key'])) {
+        if (isset($data['key'])) {
             $query = $query->where('title', 'like', '%'.$data['key'].'%')
                   ->orWhere('introduction', 'like', '%'.$data['key'].'%')->take(15)->paginate(10);
         }
 
-        if(isset($data['status'])) {
-            if($data['status']==config('config.option.newest')){
+        if (isset($data['status'])) {
+            if ($data['status'] == config('config.option.newest')) {
                 $query = $query->orderByDesc('id');
             } elseif ($data['status'] == config('config.option.oldest')) {
                 $query = $query->orderBy('id', 'ASC');
@@ -80,26 +80,26 @@ class Course extends Model
             });
         }
 
-        if(isset($data['learn_number'])) {
-            $query = $query->withCount(['users as users_count' => function($subquery) {
+        if (isset($data['learn_number'])) {
+            $query = $query->withCount(['users as users_count' => function ($subquery) {
                 $subquery->groupBy('course_id');
             }])->orderBy('users_count', $data['learn_number']);
         }
 
-        if(isset($data['learn_times'])) {
-            $query = $query->withSum('lessons', 'learn_time', function($subquery) {
+        if (isset($data['learn_times'])) {
+            $query = $query->withSum('lessons', 'learn_time', function ($subquery) {
                 $subquery->groupBy('course_id');
             })->orderBy('lessons_sum_learn_time', $data['learn_times']);
         }
 
-        if(isset($data['number_lesson'])) {
-            $query = $query->withCount(['lessons as lessons_count' => function($subquery) {
+        if (isset($data['number_lesson'])) {
+            $query = $query->withCount(['lessons as lessons_count' => function ($subquery) {
                 $subquery->groupBy('course_id');
             }])->orderBy('lessons_count', $data['number_lesson']);
         }
 
-        if(isset($data['tag'])) {
-            $query->whereHas('tags', function($subquery) use ($data) {
+        if (isset($data['tag'])) {
+            $query->whereHas('tags', function ($subquery) use ($data) {
                 $subquery->where('tag_id', $data['tag']);
             });
         }

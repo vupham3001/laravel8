@@ -24,7 +24,7 @@ class TagFactory extends Factory
     public function definition()
     {
         return [
-            'name'=> $this->faker->randomDigit(),
+            'name' => $this->faker->randomDigit(),
         ];
     }
 }
