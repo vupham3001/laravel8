@@ -6,16 +6,15 @@
     <div class="all-courses" id="all-courses">
         <div class="container">
             <div class="search d-flex">
-                <form class="form-inline" method="GET" action="{{ route('coursesSearch') }}">
-
-                    <a class="btn btn-filter" id="btnFilter" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <form class="form-inline" method="GET" action="{{ route('search') }}">
+                    <a class="btn btn-filter" id="btnFilter" data-toggle="collapse" href="#" role="button" aria-expanded="false">
                         <i class="fas fa-sliders-h"></i>
                         <span>Filter</span>
                     </a>
                     <input class="search-input" type="text" name="key" placeholder="Search...">
                     <label for="pwd"><i class="fas fa-search"></i></label>
                     <input class="btn-search" type="submit" value="Search">
-                    <div class="colapse d-none" id="colapseExample">
+                    <div class="colapse d-none" id="">
                         <div class="d-flex colapse-filter">
                             <div class="colapse-title">
                                 <span>FilterBy</span>
@@ -72,7 +71,7 @@
             <div class="list-courses">
                 <div class="row">
                     @foreach($courses as $course)
-                        @include('courses.list-courses')
+                        @include('courses.list_course')
                     @endforeach
                 </div>
             </div>

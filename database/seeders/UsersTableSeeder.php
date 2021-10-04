@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Faker\Factory as Faker;
-use database\factories\UserFactory;
+use Database\Factories\UserFactory;
 
 class UsersTableSeeder extends Seeder
 {

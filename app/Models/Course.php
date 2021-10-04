@@ -62,38 +62,36 @@ class Course extends Model
     public function scopeFilter($query, $data)
     {
         if (isset($data['key'])) {
-            $query = $query->where('title', 'like', '%'.$data['key'].'%')
+            $query->where('title', 'like', '%'.$data['key'].'%')
                   ->orWhere('introduction', 'like', '%'.$data['key'].'%');
         }
 
         if (isset($data['status'])) {
             if ($data['status'] == config('config.option.newest')) {
-                $query = $query->orderByDesc('id');
-            } elseif ($data['status'] == config('config.option.oldest')) {
-                $query = $query->orderBy('id');
+                $query->orderByDesc('id');
             }
         }
 
         if (isset($data['teacher'])) {
-            $query = $query->whereHas('users', function ($subquery) use ($data) {
+            $query->whereHas('users', function ($subquery) use ($data) {
                 $subquery->where('user_id', $data['teacher']);
             });
         }
 
         if (isset($data['learn_number'])) {
-            $query = $query->withCount(['users as users_count' => function ($subquery) {
+            $query->withCount(['users as users_count' => function ($subquery) {
                 $subquery->groupBy('course_id');
             }])->orderBy('users_count', $data['learn_number']);
         }
 
         if (isset($data['learn_times'])) {
-            $query = $query->withSum('lessons', 'learn_time', function ($subquery) {
+            $query->withSum('lessons', 'learn_time', function ($subquery) {
                 $subquery->groupBy('course_id');
             })->orderBy('lessons_sum_learn_time', $data['learn_times']);
         }
 
         if (isset($data['number_lesson'])) {
-            $query = $query->withCount(['lessons as lessons_count' => function ($subquery) {
+            $query->withCount(['lessons as lessons_count' => function ($subquery) {
                 $subquery->groupBy('course_id');
             }])->orderBy('lessons_count', $data['number_lesson']);
         }

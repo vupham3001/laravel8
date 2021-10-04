@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Faker\Factory as Faker;
 use App\Models\CourseTag;
-use database\factories\CourseTagFactory;
+use Database\Factories\CourseTagFactory;
 
 class CourseTagsTableSeeder extends Seeder
 {

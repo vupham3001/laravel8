@@ -9,7 +9,7 @@ use Faker\Factory as Faker;
 use App\Models\Course;
 use App\Models\User;
 use App\Models\CourseUser;
-use database\factories\CourseUsersFactory;
+use Database\Factories\CourseUsersFactory;
 
 class CourseUsersTableSeeder extends Seeder
 {

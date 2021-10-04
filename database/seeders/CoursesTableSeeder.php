@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Course;
 use Faker\Factory as Faker;
 use App\Models\Lesson;
-use database\factories\CourseFactory;
+use Database\Factories\CourseFactory;
 
 class CoursesTableSeeder extends Seeder
 {

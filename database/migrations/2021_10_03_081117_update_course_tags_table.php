@@ -26,7 +26,7 @@ class UpdateCourseTagsTable extends Migration
     public function down()
     {
         Schema::table('course_tags', function (Blueprint $table) {
-            $table->integer('course_id');
+            $table->renameColumn('course_id', 'courses_id');
         });
     }
 }
