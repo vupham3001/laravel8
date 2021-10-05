@@ -32,30 +32,30 @@
                                     <select class="teacher" name="teacher" id="teachersss">
                                         <option value="">Teacher</option>
                                         @foreach($teachers as $teacher)
-                                        <option class="" value="{{$teacher->id}}" {{ request('teacher') == $teacher->id ? 'selected' : ''}}>{{$teacher->name}}</option>
+                                        <option class="" value="{{ $teacher->id }}" {{ request('teacher') == $teacher->id ? 'selected' : '' }}>{{ $teacher->name }}</option>
                                         @endforeach
                                     </select>
                                     <select class="learn-number" name="learn_number" id="learn-number">
                                         <option value="">Number Learners</option>
-                                        <option value="{{config('config.option.asc')}}"{{request('learn_number') == config('config.option.asc') ? 'selected' : ''}}>ascending</option>
-                                        <option value="{{config('config.option.desc')}}" {{request('learn_number') == config('config.option.desc') ? 'selected' : ''}}>decrease</option>
+                                        <option value="{{ config('config.option.asc') }}"{{ request('learn_number') == config('config.option.asc') ? 'selected' : '' }}>ascending</option>
+                                        <option value="{{ config('config.option.desc') }}" {{ request('learn_number') == config('config.option.desc') ? 'selected' : '' }}>decrease</option>
                                     </select>
                                     <select class="learn-time" name="learn_times" id="Learn_time">
                                         <option value="">Number Times</option>
-                                        <option value="{{config('config.option.asc')}}" {{request('learn_times') == config('config.option.asc') ? 'selected' : ''}}>ascending</option>
-                                        <option value="{{config('config.option.desc')}}"{{request('learn_times') == config('config.option.desc') ? 'selected' : ''}}>decrease</option>
+                                        <option value="{{ config('config.option.asc') }}" {{ request('learn_times') == config('config.option.asc') ? 'selected' : '' }}>ascending</option>
+                                        <option value="{{ config('config.option.desc') }}"{{ request('learn_times') == config('config.option.desc') ? 'selected' : '' }}>decrease</option>
                                     </select>
                                     <select class="number-lesson" name="number_lesson" id="number-lesson">
                                         <option value="">Number Lessons</option>
-                                        <option value="{{config('config.option.asc')}}" {{request('numbber_lesson') == config('config.option.asc') ? 'selected' : ''}}>ascending</option>
-                                        <option value="{{config('config.option.desc')}}" {{request('numbber_lesson') == config('config.option.desc') ? 'selected' : ''}}>decrease</option>
+                                        <option value="{{ config('config.option.asc') }}" {{ request('numbber_lesson') == config('config.option.asc') ? 'selected' : '' }}>ascending</option>
+                                        <option value="{{ config('config.option.desc') }}" {{ request('numbber_lesson') == config('config.option.desc') ? 'selected' : '' }}>decrease</option>
                                     </select>
                                 </div>
                                 <div class="bot-line d-flex">
                                     <select class="tags" name="tag" id="tags">
                                         <option value="">Tags</option>
                                         @foreach($tags as $tag)
-                                        <option class="" value="{{$tag->id}}" {{ request('tag') == $tag->id ? 'selected' : ''}}>{{ $tag->name }}</option>
+                                        <option class="" value="{{$tag->id}}" {{ request('tag') == $tag->id ? 'selected' : '' }}>{{ $tag->name }}</option>
                                         @endforeach
                                     </select>
                                     <select class="review" name="review" id="review">
@@ -75,7 +75,7 @@
                     @endforeach
                 </div>
             </div>
-            <span>{!! $courses->appends(request()->only('key'))->onEachSide(1)->links() !!}</span>
+            <span>{!! $courses->appends(request()->all())->onEachSide(1)->links() !!}</span>
         </div>
     </div>
 @endsection

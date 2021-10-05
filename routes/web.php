@@ -24,6 +24,6 @@ Route::namespace('App\Http\Controllers\Auth')->group(function () {
 });
 
 Route::namespace('App\Http\Controllers')->group(function () {
-    Route::get('/allcourses', 'CourseController@index')->name('courses');
+    Route::get('/courses', 'CourseController@index')->name('course');
     Route::get('/courseSearch', 'CourseController@index')->name('search');
 });
