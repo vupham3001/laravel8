@@ -4,11 +4,11 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
+use App\Models\Tag;
 use Faker\Factory as Faker;
-use Database\Factories\UserFactory;
+use Database\Factories\TagFactory;
 
-class UsersTableSeeder extends Seeder
+class TagsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,6 +17,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->count(3)->create();
+        Tag::factory(10)->create();
     }
 }
